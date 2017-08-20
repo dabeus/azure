@@ -66,13 +66,13 @@ fi
 
 if [[ -z "$templateFilePath" ]]; then
     echo "Enter the path to the ARM template file"
-    echo "Template File Path:"
+    echo "templateFilePath:"
     read templateFilePath
 fi
 
 if [[ -z "$parametersFilePath" ]]; then
     echo "Enter the path to the ARM template parameters file"
-    echo "Parameters Template File Path:"
+    echo "parametersFilePath:"
     read parametersFilePath
 fi
 
@@ -87,7 +87,7 @@ if [ ! -f "$parametersFilePath" ]; then
 fi
 
 if [ -z "$subscriptionId" ] || [ -z "$resourceGroupName" ] || [ -z "$deploymentName" ] || [ -z "$templateFilePath" ] || [ -z "$parametersFilePath" ]; then
-    echo "Either Subscription Id, Resource Group Name, Deployment Name, Template File Path, or Parameters Template File Path is empty"
+    echo "Either subscriptionId, resourceGroupName, deploymentName, templateFilePath, or parametersTemplateFilePath is empty"
     usage
 fi
 
